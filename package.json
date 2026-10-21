@@ -1,0 +1,56 @@
+{
+  "name": "automacao-instagram",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "tsx watch server/index.ts",
+    "client": "vite",
+    "build": "vite build",
+    "start": "tsx server/index.ts",
+    "electron": "concurrently \"npm run server\" \"npm run client\" \"electron electron/main.cjs\"",
+    "electron:start": "electron electron/main.cjs",
+    "test:e2e": "node test_runner.js"
+  },
+  "keywords": [
+    "instagram",
+    "automation",
+    "assistant",
+    "copilot",
+    "saas"
+  ],
+  "author": "InstaAssist Local",
+  "license": "MIT",
+  "description": "Assistente local de automação de comentários do Instagram",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.109.0",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "lucide-react": "^1.60.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "sql.js": "^1.15.1",
+    "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/sql.js": "^1.4.11",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.6.1",
+    "concurrently": "^9.2.5",
+    "cross-env": "^10.1.0",
+    "electron": "^41.7.1",
+    "postcss": "^8.5.31",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^6.4.4"
+  }
+}
